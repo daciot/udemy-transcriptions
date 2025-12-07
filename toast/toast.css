@@ -1,0 +1,29 @@
+.extension-toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.extension-toast {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(100%);
+    pointer-events: all; 
+    max-width: 300px;
+    font-size: 14px;
+}
+
+.extension-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
