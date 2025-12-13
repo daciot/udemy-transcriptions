@@ -1,7 +1,7 @@
 function transcriptBtnClickHandler(){
     const panelEl = dom.getTranscriptPanelEl();        
     if (panelEl) {
-        transcript.save(transcript.get())
+        transcript.checkAndPrepare(transcript.get())
             .then(transcript.download)
             .catch(showToast);
     }
